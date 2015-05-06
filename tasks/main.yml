@@ -21,6 +21,7 @@
   tags:
     - redis
     - configuration
+    - services
 
 - name: configure firewalld for redis
   firewalld: zone=public port=6379/tcp permanent=true state=enabled
