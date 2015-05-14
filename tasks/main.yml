@@ -15,9 +15,8 @@
     - redis
     - configuration
 
-- name: ensure redis is enabled
-  service: name=redis enabled=yes
-  notify: restart redis
+- name: ensure redis is enabled and started
+  service: name=redis enabled=yes state=started
   tags:
     - redis
     - configuration
