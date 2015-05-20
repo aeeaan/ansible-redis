@@ -10,6 +10,11 @@ Role Variables
 | :---                                  | :---                          | :---                                          |
 | redis_bind_address			| 127.0.0.1			| 	  	       		    		|
 
+Dependencies
+------------
+
+* correcthorse.common
+
 Example Playbook
 ----------------
 
