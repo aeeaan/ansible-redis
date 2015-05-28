@@ -23,9 +23,9 @@
     - services
 
 - name: configure firewalld for redis
-  firewalld: zone=public port=6379/tcp permanent=true state=enabled
+  firewalld: zone=public port="{{ redis_port }}/tcp" permanent=true state=enabled
   notify: reload firewall
-  when: ansible_distribution_major_version|int == 7
+  when: redis_open_port and ansible_distribution_major_version|int > 6
   tags:
     - redis
     - firewall
