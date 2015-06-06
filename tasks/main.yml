@@ -1,6 +1,6 @@
 ---
 - name: install redis
-  yum: name=redis state=installed
+  yum: name=redis state=present
   tags:
     - redis
     - packages
