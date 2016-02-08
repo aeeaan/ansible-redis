@@ -16,7 +16,7 @@
     - configuration
 
 - name: configure redis sentinel
-  template: src=redis-sentinel.conf.j2 dest=redis-sentinel.conf
+  template: src=redis-sentinel.conf.j2 dest=/etc/redis-sentinel.conf
   when: ansible_distribution_major_version|int > 6
   notify: restart redis
   tags:
